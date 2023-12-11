@@ -70,6 +70,14 @@ function updateGallery() {
   gallery.innerHTML = '';
   fillGallery();
 }
+
+gallery.addEventListener('click', (event) => {
+  if (event.target.classList.contains('removeImageBtn')) {
+    const index = parseInt(event.target.getAttribute('data-index'), 10);
+    imageList.splice(index, 1);
+    updateGallery();
+  }
+});
 //The change ends here
 galleryForm.addEventListener('submit',  (event) => {
   event.preventDefault();
