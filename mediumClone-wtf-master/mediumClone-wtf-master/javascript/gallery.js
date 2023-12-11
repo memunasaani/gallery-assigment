@@ -65,12 +65,12 @@ const addNewImage = () => {
   gallery.prepend(li);
 }
 
-//new change 
+//This is the change
 function updateGallery() {
   gallery.innerHTML = '';
   fillGallery();
 }
-
+//The change ends here
 galleryForm.addEventListener('submit',  (event) => {
   event.preventDefault();
   const imageNameValue = imageNameInput.value;
